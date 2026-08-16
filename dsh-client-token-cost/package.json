@@ -1,0 +1,42 @@
+{
+  "name": "@deepseek-ai/dsh-client-token-cost",
+  "description": "正规 host 插件：tokenCost 会话投影（用量与花费）+ 左下角浮层展示；峰谷计价、价格可手动配置",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "rq232323",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rq232323/dsh-client-token-cost.git"
+  },
+  "homepage": "https://github.com/rq232323/dsh-client-token-cost",
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.6",
+    "zod": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-session-projection": "^0.1.0-rc.6",
+    "react": "^18.2.0"
+  }
+}
